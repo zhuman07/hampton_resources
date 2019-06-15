@@ -1,0 +1,150 @@
+@import "bourbon"
+@import "vars.sass"
+
+//Load Libs SASS
+@import "app/libs/animate/animate.sass"
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+//Custom Styles Here
+.top-block
+	background-color: #fff
+	background-repeat: no-repeat
+	background-position: 50% 50%
+	background-size: cover
+	padding: 100px 0
+	.top-block-text
+		.top-block-text-head
+			color: #fff
+			font-size: 87px
+			font-family: $gotham
+			line-height: 1.1
+		a
+			text-transform: uppercase
+			display: inline-block
+			border: 3px solid #fff
+			padding: 10px 70px
+			margin-top: 50px
+			transition: all .5s ease
+			&:hover
+				color: $color2
+				border-color: $color2
+
+.middle-block
+	background-color: #fff
+	padding: 40px 0
+	.middle-block-text
+		margin: 20px 0
+		&:before
+			content: ''
+			display: inline-block
+			width: 50px
+			height: 10px
+			background-color: $color2
+			position: relative
+			top: 0
+		h2
+			font-size: 50px
+			color: #000
+			font-family: $gotham
+			line-height: 1.1
+			margin: 0
+		p
+			padding-right: 180px
+			line-height: 1.2
+	.middle-block-image
+		text-align: right
+		img
+			width: 100%
+		&.stone
+			img
+				width: 60%
+
+.parallax-image-block
+	text-align: center
+	padding: 65px 0
+	color: #fff
+	&:before
+		content: ''
+		display: block
+		position: fixed
+		left: 0
+		right: 0
+		bottom: 0
+		top: 0
+		z-index: -1
+		transform-origin: center
+		min-height: 100vh
+		background-image: url('../img/parallax.png')
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: 50% 50%
+		transition: 1s
+		transform: translateZ(-1px) scale(2)
+	p
+		line-height: 1
+		margin: 0
+	span.year
+		font-family: $gotham
+		display: block
+		font-size: 140px
+		color: $color2
+		line-height: 1
+
+.partners
+	background-image: url('../img/partners-bg.jpg')
+	background-repeat: no-repeat
+	background-position: 50% 50%
+	.middle-block-text
+		h2
+			color: #fff
+	.partners-logos
+		margin: 70px 0
+		&:after
+			content: ''
+			display: block
+			clear: both
+		.partners-logos-item
+			display: inline-block
+			width: 24%
+			text-align: center
+			vertical-align: middle
+			&:first-child
+				text-align: left
+			&:last-child
+				text-align: right
+
+footer
+	background-color: $color1
+	padding: 50px 0
+	.contacts-block
+		text-align: left
+		margin-top: 30px
+
+.contacts-bottom-image
+	img
+		width: 100%
+
+//ALWAYS END
+@import "media"
