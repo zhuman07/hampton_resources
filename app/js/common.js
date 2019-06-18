@@ -96,4 +96,35 @@ $(function() {
         }
     });
 
+    $('.photo-slider').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        prevArrow: $('.photo-slider-arrows .left-arrow'),
+        nextArrow: $('.photo-slider-arrows .right-arrow'),
+        asNavFor: '.photo-slider-nav',
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            },
+        ]
+    });
+    $('.photo-slider-nav').slick({
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        asNavFor: '.photo-slider',
+        dots: false,
+        centerMode: false,
+        focusOnSelect: true,
+        arrows: false
+    });
+
+    $('.photo-slider .photo-slider-item').equalHeights();
+
+    $('.photo-slider-nav .photo-slider-nav-item').equalHeights();
+
 });
